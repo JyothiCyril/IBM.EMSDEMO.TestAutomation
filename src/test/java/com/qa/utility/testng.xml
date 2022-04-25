@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Test Automation - EMS">
+	<listeners>
+		<listener class-name="com.qa.utility.Reporting"></listener>
+	</listeners>
+
+
+	<parameter name="Browser" value="chrome"></parameter>
+	<parameter name="Url" value="http://www.ems.com/"></parameter>
+	<test thread-count="5" name="Funtional Testing">
+		<classes>
+			<class name="com.qa.testscripts.TC_001" />
+		</classes>
+	</test> <!-- Funtional Testing -->
+</suite> <!-- Test Automation - EMS -->
