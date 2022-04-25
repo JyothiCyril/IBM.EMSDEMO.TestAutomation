@@ -20,6 +20,7 @@ import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 
 import com.qa.pages.AddEmpPages;
+import com.qa.pages.DeleteEmpPages;
 import com.qa.pages.LoginPages;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -36,6 +37,7 @@ public class TestBase {
 	WebDriver driver;
 	LoginPages LoginOR;
 	AddEmpPages AddEmpPagesOR;
+	DeleteEmpPages DeleteEmpOR;
 	SoftAssert sAssert;
 	FileInputStream fileLoc;
 	Properties prop;
@@ -66,6 +68,7 @@ public class TestBase {
 		Js = (JavascriptExecutor)driver;
 		LoginOR = new LoginPages(driver);
 		AddEmpPagesOR =new AddEmpPages(driver);
+		DeleteEmpOR = new DeleteEmpPages(driver);
 		driver.get(Url);
 		driver.manage().window().maximize();
 		
